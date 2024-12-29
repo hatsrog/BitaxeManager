@@ -2,22 +2,13 @@
 
 namespace BitaxeManager.Core
 {
-    public class ApiService
+    public class ApiService(HttpClient httpClient)
     {
-        private readonly HttpClient _httpClient;
-
-        public ApiService(HttpClient httpClient)
-        {
-            _httpClient = httpClient;
-        }
-
         public async Task<DeviceStatus?> GetDeviceStatusAsync()
         {
             try
             {
-                string apiUrl = "http://192.168.1.133/api/system/info";
-
-                var response = await _httpClient.GetAsync(apiUrl);
+                var response = await httpClient.GetAsync(httpClient.BaseAddress);
 
                 response.EnsureSuccessStatusCode();
 
@@ -26,7 +17,7 @@ namespace BitaxeManager.Core
             }
             catch (HttpRequestException ex)
             {
-                Console.WriteLine($"Erreur HTTP : {ex.Message}");
+                Console.WriteLine($"HTTP Error : {ex.Message}");
                 return null;
             }
         }

@@ -8,7 +8,10 @@ var builder = Host.CreateApplicationBuilder(args);
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddHttpClient<ApiService>();
+var apiBaseUrl = builder.Configuration.GetSection("BitaxeAPI:DefaultURL").Value;
+
+builder.Services.AddHttpClient<ApiService>(options =>
+    options.BaseAddress = new Uri(apiBaseUrl));
 builder.Services.AddScheduler();
 builder.Services.AddTransient<BitaxeStatusTask>();
 
