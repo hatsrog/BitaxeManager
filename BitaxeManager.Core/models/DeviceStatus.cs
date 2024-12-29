@@ -1,0 +1,43 @@
+﻿public class DeviceStatus
+{
+    public float Power { get; set; }
+    public float Voltage { get; set; }
+    public float Current { get; set; }
+    public float Temp { get; set; }
+    public int VrTemp { get; set; }
+    public double HashRate { get; set; }
+    public string BestDiff { get; set; }
+    public string BestSessionDiff { get; set; }
+    public int StratumDiff { get; set; }
+    public int IsUsingFallbackStratum { get; set; }
+    public int FreeHeap { get; set; }
+    public int CoreVoltage { get; set; }
+    public int CoreVoltageActual { get; set; }
+    public int Frequency { get; set; }
+    public string Ssid { get; set; }
+    public string MacAddr { get; set; }
+    public string Hostname { get; set; }
+    public string WifiStatus { get; set; }
+    public int SharesAccepted { get; set; }
+    public int SharesRejected { get; set; }
+    public int UptimeSeconds { get; set; }
+    public int AsicCount { get; set; }
+    public int SmallCoreCount { get; set; }
+    public string ASICModel { get; set; }
+    public string StratumURL { get; set; }
+    public string FallbackStratumURL { get; set; }
+    public int StratumPort { get; set; }
+    public int FallbackStratumPort { get; set; }
+    public string StratumUser { get; set; }
+    public string FallbackStratumUser { get; set; }
+    public string Version { get; set; }
+    public string BoardVersion { get; set; }
+    public string RunningPartition { get; set; }
+    public int Flipscreen { get; set; }
+    public int OverheatMode { get; set; }
+    public int Invertscreen { get; set; }
+    public int Invertfanpolarity { get; set; }
+    public int Autofanspeed { get; set; }
+    public int Fanspeed { get; set; }
+    public int Fanrpm { get; set; }
+}

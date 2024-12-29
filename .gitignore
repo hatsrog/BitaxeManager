@@ -1,0 +1,8 @@
+BitaxeManager.Core/bin/
+BitaxeManager.Core/Migrations/
+BitaxeManager.Core/obj/
+BitaxeWorker/.vs/
+BitaxeWorker/bin/
+BitaxeWorker/obj/
+BitaxeWorker/Properties/
+.vs/
