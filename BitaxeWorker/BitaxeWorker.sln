@@ -5,7 +5,9 @@ VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitaxeWorker", "BitaxeWorker.csproj", "{1264358F-154B-442A-9E8D-045E4778E137}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitaxeManager.Core", "..\BitaxeManager.Core\BitaxeManager.Core.csproj", "{A0681166-8027-4D89-A9F4-4C39D57217E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitaxeManager.Core", "..\BitaxeManager.Core\BitaxeManager.Core.csproj", "{A0681166-8027-4D89-A9F4-4C39D57217E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitaxeManager.UI", "..\BitaxeManager.UI\BitaxeManager.UI.csproj", "{38DD061C-8EB5-4F1F-936D-3538A71A0FF6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{A0681166-8027-4D89-A9F4-4C39D57217E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0681166-8027-4D89-A9F4-4C39D57217E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0681166-8027-4D89-A9F4-4C39D57217E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38DD061C-8EB5-4F1F-936D-3538A71A0FF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38DD061C-8EB5-4F1F-936D-3538A71A0FF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38DD061C-8EB5-4F1F-936D-3538A71A0FF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38DD061C-8EB5-4F1F-936D-3538A71A0FF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

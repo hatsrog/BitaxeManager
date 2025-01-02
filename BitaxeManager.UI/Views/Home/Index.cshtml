@@ -1,0 +1,28 @@
+﻿@model IndexViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <table>
+        <tr>
+            <td>Timestamp</td>
+            <td>Hashrate</td>
+            <td>Temperature</td>
+            <td>Number of shares accepted</td>
+        </tr>
+        @if (Model.DeviceStatusLogs != null)
+        {
+            @foreach (var elem in Model.DeviceStatusLogs)
+            {
+                <tr>
+                    <td>@elem.Timestamp</td>
+                    <td>@Math.Round(elem.HashRate, 3)</td>
+                    <td>@elem.Temperature</td>
+                    <td>@elem.SharesAccepted</td>
+                </tr>
+            }
+        }
+    </table>
+    
+</div>
