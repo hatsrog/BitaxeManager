@@ -1,6 +1,6 @@
-  USE [BitaxeManager]
+USE [BitaxeManager]
 GO
-/****** Object:  Table [dbo].[DeviceStatusLogs]    Script Date: 29/12/2024 18:04:35 ******/
+/****** Object:  Table [dbo].[DeviceStatusLogs]    Script Date: 12/01/2025 22:35:56 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -11,6 +11,8 @@ CREATE TABLE [dbo].[DeviceStatusLogs](
 	[HashRate] [float] NOT NULL,
 	[Temperature] [real] NOT NULL,
 	[SharesAccepted] [int] NOT NULL,
+	[FanSpeed] [int] NOT NULL,
+	[FanRPM] [int] NOT NULL,
  CONSTRAINT [PK_DeviceStatusLogs] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC

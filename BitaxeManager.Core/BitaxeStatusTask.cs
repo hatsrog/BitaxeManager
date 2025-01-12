@@ -16,7 +16,9 @@ namespace BitaxeManager.Core
                     HashRate = deviceStatus.HashRate,
                     Timestamp = DateTime.Now,
                     SharesAccepted = deviceStatus.SharesAccepted,
-                    Temperature = deviceStatus.Temp
+                    Temperature = deviceStatus.Temp,
+                    FanSpeed = deviceStatus.Fanspeed,
+                    FanRPM = deviceStatus.Fanrpm
                 };
                 dbContext.DeviceStatusLogs.Add(newStatus);
                 await dbContext.SaveChangesAsync();
