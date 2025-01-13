@@ -10,14 +10,17 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 var apiBaseUrl = builder.Configuration.GetSection("BitaxeAPI:DefaultURL").Value;
 
-builder.Services.AddHttpClient<ApiService>(options =>
-    options.BaseAddress = new Uri(apiBaseUrl));
-builder.Services.AddScheduler();
-builder.Services.AddTransient<BitaxeStatusTask>();
-
-var host = builder.Build();
-host.Services.UseScheduler(s =>
+if(!string.IsNullOrWhiteSpace(apiBaseUrl))
 {
-    s.Schedule<BitaxeStatusTask>().EverySeconds(10);
-});
-host.Run();
+    builder.Services.AddHttpClient<ApiService>(options =>
+    options.BaseAddress = new Uri(apiBaseUrl));
+    builder.Services.AddScheduler();
+    builder.Services.AddTransient<BitaxeStatusTask>();
+
+    var host = builder.Build();
+    host.Services.UseScheduler(s =>
+    {
+        s.Schedule<BitaxeStatusTask>().EverySeconds(10);
+    });
+    host.Run();
+}
