@@ -4,12 +4,13 @@
 }
 
 <div class="text-center">
+    <button id="reload">Reload</button>
     <table>
         <tr>
-            <td>Timestamp</td>
-            <td>Hashrate</td>
-            <td>Temperature</td>
-            <td>Number of shares accepted</td>
+            <th>Timestamp</th>
+            <th>Hashrate</th>
+            <th>Temperature</th>
+            <th>Number of shares accepted</th>
         </tr>
         @if (Model.DeviceStatusLogs != null)
         {
@@ -24,5 +25,9 @@
             }
         }
     </table>
-    
 </div>
+<script type="text/javascript">
+    $("#reload").click(function () { 
+        console.log("click!");
+    })
+</script>

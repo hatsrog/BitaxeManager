@@ -1,5 +1,6 @@
 using BitaxeManager.Core.data;
 using BitaxeManager.UI.Models;
+using BitaxeManager.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -9,7 +10,11 @@ namespace BitaxeManager.UI.Controllers
     {
         public IActionResult Index()
         {
-            return View(new StatsViewModel());
+            var service = new BitaxeStatsService(context.DeviceStatusLogs);
+            var averageHashrate = service.GetAverageHashrate();
+            service.AverageHashrate(2);
+            var averageYesterdayHashrate = service.GetAverageHashrate(DateTime.Today.AddDays(-1));
+            return View(new StatsViewModel { AverageHashrate = averageHashrate, AverageYesterdayHashrate = averageYesterdayHashrate });
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

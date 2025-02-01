@@ -20,3 +20,11 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+tr {
+    border: 1px solid black;
+}
+
+th {
+    width: 200px;
+}
